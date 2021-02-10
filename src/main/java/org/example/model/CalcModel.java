@@ -1,24 +1,27 @@
 package org.example.model;
 
+import java.time.LocalDate;
+
 public class CalcModel {
-    Integer firstArg;
-    Integer secondArg;
+    Double firstArg;
+    Double secondArg;
     char symbol;
+    LocalDate operationTime;
     //Operation operation;
 
-    public Integer getFirstArg() {
+    public Double getFirstArg() {
         return firstArg;
     }
 
-    public void setFirstArg(Integer firstArg) {
+    public void setFirstArg(Double firstArg) {
         this.firstArg = firstArg;
     }
 
-    public Integer getSecondArg() {
+    public Double getSecondArg() {
         return secondArg;
     }
 
-    public void setSecondArg(Integer secondArg) {
+    public void setSecondArg(Double secondArg) {
         this.secondArg = secondArg;
     }
 
@@ -28,5 +31,13 @@ public class CalcModel {
 
     public void setSymbol(char symbol) {
         this.symbol = symbol;
+    }
+
+    public LocalDate getOperationTime() {
+        return operationTime;
+    }
+
+    public void setOperationTime(LocalDate operationTime) {
+        this.operationTime = operationTime;
     }
 }
