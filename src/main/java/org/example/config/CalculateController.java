@@ -3,6 +3,7 @@ package org.example.config;
 import org.example.dao.CalculatorDao;
 import org.example.dao.CalculatorDaoImpl;
 import org.example.model.CalcModel;
+import org.example.model.OperationModel;
 import org.example.service.CalculatorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,9 +29,9 @@ public class CalculateController {
     @PostMapping("/calculate")
     public String calculate(@ModelAttribute CalcModel calcModel, Model model) {
         double result = calculatorService.calculateByOperation(calcModel);
+        calculatorDao.addResult(calculatorService.setResultResponse(result));
         model.addAttribute("result", result);
         model.addAttribute("history", calculatorDao.getHistory());
-        calculatorDao.addResult(result);
         return "home/calculator";
     }
 

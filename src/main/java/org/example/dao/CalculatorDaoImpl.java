@@ -1,22 +1,23 @@
 package org.example.dao;
 
+import org.example.model.OperationModel;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 
 @Component
 public class CalculatorDaoImpl implements CalculatorDao{
-    private ArrayList<Double> history = new ArrayList<>();
+    private ArrayList<OperationModel> history = new ArrayList<>();
 
-    public void addResult(double result) {
+    public void addResult(OperationModel result) {
         history.add(result);
     }
 
-    public void removeResult(Double result) {
+    public void removeResult(OperationModel result) {
         history.remove(result);
     }
 
-    public ArrayList<Double> getHistory() {
+    public ArrayList<OperationModel> getHistory() {
         return history;
     }
 }

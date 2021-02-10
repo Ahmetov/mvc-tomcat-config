@@ -1,14 +1,15 @@
 package org.example.model;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class OperationModel {
     Double result;
-    LocalDate date;
+    LocalDateTime operationTime;
 
-    public OperationModel(Double result, LocalDate date) {
+    public OperationModel(Double result, LocalDateTime operationTime) {
         this.result = result;
-        this.date = date;
+        this.operationTime = operationTime;
     }
 
     public Double getResult() {
@@ -19,11 +20,11 @@ public class OperationModel {
         this.result = result;
     }
 
-    public LocalDate getDate() {
-        return date;
+    public LocalDateTime getOperationTime() {
+        return operationTime;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
+    public void setOperationTime(LocalDateTime operationTime) {
+        this.operationTime = operationTime;
     }
 }

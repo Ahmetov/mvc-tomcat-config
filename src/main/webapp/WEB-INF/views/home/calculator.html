@@ -25,8 +25,10 @@
 
     <p>Operation history</p>
     <tr th:each="result : ${history}">
-        <td><span th:text="${result}"></span></td>
-        <td><span th:text="${result}"></span></td>
+        <td>Result: <span th:text="${result.getResult()}"></span></td>
+        <br>
+        <td>Date: <span th:text="${result.getOperationTime()}"></span></td>
+        <br>
         <br>
     </tr>
 
